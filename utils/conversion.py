@@ -9,9 +9,7 @@ from pymol import cmd, stored
 
 from sklearn import neighbors
 from Bio.PDB import *
-
 from utils.parser import read_wrl2
-
 
 def pdb_to_wrl(pdb_path:str,
                output_dir:str,
@@ -48,7 +46,7 @@ def wrl_to_pts(wrl_path:str,
     default None it means the name will be the pdb file name
     """
     assert os.path.exists(wrl_path), sys.stderr
-    assert pdb_path.endswith(".wrl"), f"Not a wrl file!"
+    assert wrl_path.endswith(".wrl"), f"Not a wrl file!"
     if not save_name:
         save_name=Path(wrl_path).stem
     vb, _, cb, nb = read_wrl2(wrl_path)
