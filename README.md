@@ -1,4 +1,4 @@
-# epitope_mapping_evaluator
+# Epitope Mapping Evaluator
 
 ## Install  
 
